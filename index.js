@@ -11,21 +11,18 @@ let passwordStringTwo = "";
 // console.log("Button found:", generatePasswordButton);
 // console.log("Password display one found:", passwordDisplayOne);
 // console.log("Password display two found:", passwordDisplayTwo);
+let passwordString="";
+function createSinglePassword(){
+    passwordString="";
+    for(let i=0;i<length;i++){
+        let randomNumber = Math.floor(Math.random()*characters.length);
+        passwordString+=characters[randomNumber];  
+    }
+    return passwordString;
+}
 function generateRandomPassword(){
-    console.log("Button clicked!"); // Debug message
-    passwordStringOne="";
-    passwordStringTwo="";
-    for(let i=0;i<length;i++){
-        let randomNumber = Math.floor(Math.random()*characters.length);
-        passwordStringOne+=characters[randomNumber];  
-    }
-    for(let i=0;i<length;i++){
-        let randomNumber = Math.floor(Math.random()*characters.length);
-        passwordStringTwo+=characters[randomNumber];  
-    }
-    passwordDisplayOne.textContent=passwordStringOne;
-    passwordDisplayTwo.textContent=passwordStringTwo;
-    // return characters[randomNumber];
+    passwordDisplayOne.textContent=createSinglePassword();
+    passwordDisplayTwo.textContent=createSinglePassword();
 }
 
 
