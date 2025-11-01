@@ -4,13 +4,6 @@ let generatePasswordButton = document.getElementById("generate-password-btn");
 let passwordDisplayOne = document.getElementById("password-one");
 let passwordDisplayTwo = document.getElementById("password-two");
 let length = 15;
-let passwordStringOne = "";
-let passwordStringTwo = "";
-
-// Debug: To check if elements are found
-// console.log("Button found:", generatePasswordButton);
-// console.log("Password display one found:", passwordDisplayOne);
-// console.log("Password display two found:", passwordDisplayTwo);
 let passwordString="";
 function createSinglePassword(){
     passwordString="";
